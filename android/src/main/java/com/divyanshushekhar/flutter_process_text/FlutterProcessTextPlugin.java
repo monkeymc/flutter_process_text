@@ -198,14 +198,7 @@ public class FlutterProcessTextPlugin implements FlutterPlugin, ActivityAware {
   }
 
   public static void listenProcessTextIntent(boolean isAppRunning) {
-    if (!isAppRunning) {
-      // Open app when its not running
-      openApp();
-    } else {
-      // Fetch process text when the app is running.
-      EventCallHandlerImplementation.onProcessTextChanged();
-    }
-    // Activity launch Theme.NoDisplay
+    openApp();
     activity.finish();
   }
 
